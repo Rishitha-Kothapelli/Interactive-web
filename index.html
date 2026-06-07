@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dev Dashboard</title>
+
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="navbar">
+  <h1>⚡ Dev Dashboard</h1>
+
+  <div class="nav-buttons">
+    <button data-target="quizSection">Quiz</button>
+    <button data-target="carouselSection">Carousel</button>
+    <button data-target="jokeSection">Jokes</button>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- QUIZ -->
+  <section id="quizSection" class="card section active">
+    <h2>🧠 Tech Quiz</h2>
+
+    <div class="progress">
+      <div id="progressBar"></div>
+    </div>
+
+    <h3 id="question"></h3>
+    <div id="answers"></div>
+
+    <div id="result" class="hidden"></div>
+  </section>
+
+  <!-- CAROUSEL -->
+  <section id="carouselSection" class="card section hidden">
+    <h2>🖼 Image Carousel</h2>
+
+    <div class="carousel" id="carousel">
+      <div class="slides">
+        <img src="https://picsum.photos/900/400?1">
+        <img src="https://picsum.photos/900/400?2">
+        <img src="https://picsum.photos/900/400?3">
+      </div>
+
+      <button id="prev">❮</button>
+      <button id="next">❯</button>
+    </div>
+
+    <div id="dots" class="dots"></div>
+  </section>
+
+  <!-- JOKE -->
+  <section id="jokeSection" class="card section hidden">
+    <h2>😂 Programming Joke</h2>
+
+    <div id="jokeBox" class="joke">
+      <div class="spinner"></div>
+    </div>
+
+    <button id="jokeBtn">Fetch New Joke</button>
+  </section>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
